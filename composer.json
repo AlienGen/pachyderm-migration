@@ -3,7 +3,7 @@
     "description": "A migration tool for Pachyderm SQL database",
     "type": "library",
     "require": {
-        "php": ">=8",
+        "php": ">=8.4",
         "aliengen/pachyderm": "dev-master"
     },
     "license": "MIT",
@@ -14,9 +14,16 @@
         }
     ],
     "autoload": {
-        "psr-0": {
-            "Pachyderm": "src/"
-        },
-        "classmap": []
+        "psr-4": {
+            "Aliengen\\Pachyderm\\Migration\\": "src/Migration/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Aliengen\\Pachyderm\\Migration\\Composer\\Installer::postInstall"
+        ],
+        "post-update-cmd": [
+            "Aliengen\\Pachyderm\\Migration\\Composer\\Installer::postUpdate"
+        ]
     }
 }
