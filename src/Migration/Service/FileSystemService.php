@@ -1,6 +1,6 @@
 <?php
 
-namespace Aliengen\Pachyderm\Migration\Service;
+namespace Pachyderm\Migration\Service;
 
 class FileSystemService
 {

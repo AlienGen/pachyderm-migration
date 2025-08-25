@@ -47,8 +47,8 @@ if (!file_exists($projectRoot . '/config.php')) {
 require_once $projectRoot . '/config.php';
 
 // Import required classes
-use Aliengen\Pachyderm\Migration\Service\SetupService;
-use Aliengen\Pachyderm\Migration\Factory\MigrationFactory;
+use Pachyderm\Migration\Service\SetupService;
+use Pachyderm\Migration\Factory\MigrationFactory;
 
 // Check if --setup flag is provided
 if (isset($argv[1]) && $argv[1] === '--setup') {

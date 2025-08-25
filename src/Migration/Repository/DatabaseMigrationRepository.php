@@ -1,8 +1,8 @@
 <?php
 
-namespace Aliengen\Pachyderm\Migration\Repository;
+namespace Pachyderm\Migration\Repository;
 
-use Aliengen\Pachyderm\Service;
+use Pachyderm\Service;
 
 class DatabaseMigrationRepository implements MigrationRepositoryInterface
 {

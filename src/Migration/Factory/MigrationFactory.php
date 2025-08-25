@@ -1,12 +1,12 @@
 <?php
 
-namespace Aliengen\Pachyderm\Migration\Factory;
+namespace Pachyderm\Migration\Factory;
 
-use Aliengen\Pachyderm\Migration\Migration;
-use Aliengen\Pachyderm\Migration\Repository\DatabaseMigrationRepository;
-use Aliengen\Pachyderm\Migration\Service\FileSystemService;
-use Aliengen\Pachyderm\Migration\Executor\MigrationExecutor;
-use Aliengen\Pachyderm\Migration\Service\MigrationManager;
+use Pachyderm\Migration\Migration;
+use Pachyderm\Migration\Repository\DatabaseMigrationRepository;
+use Pachyderm\Migration\Service\FileSystemService;
+use Pachyderm\Migration\Executor\MigrationExecutor;
+use Pachyderm\Migration\Service\MigrationManager;
 
 class MigrationFactory
 {

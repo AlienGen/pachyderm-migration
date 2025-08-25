@@ -1,8 +1,8 @@
 <?php
 
-namespace Aliengen\Pachyderm\Migration;
+namespace Pachyderm\Migration;
 
-use Aliengen\Pachyderm\Migration\Service\MigrationManager;
+use Pachyderm\Migration\Service\MigrationManager;
 
 class Migration
 {

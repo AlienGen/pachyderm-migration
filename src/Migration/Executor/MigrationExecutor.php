@@ -1,9 +1,9 @@
 <?php
 
-namespace Aliengen\Pachyderm\Migration\Executor;
+namespace Pachyderm\Migration\Executor;
 
-use Aliengen\Pachyderm\Service;
-use Aliengen\Pachyderm\Migration\Repository\MigrationRepositoryInterface;
+use Pachyderm\Service;
+use Pachyderm\Migration\Repository\MigrationRepositoryInterface;
 
 class MigrationExecutor
 {

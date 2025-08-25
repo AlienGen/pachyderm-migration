@@ -1,9 +1,9 @@
 <?php
 
-namespace Aliengen\Pachyderm\Migration\Composer;
+namespace Pachyderm\Migration\Composer;
 
 use Composer\Script\Event;
-use Aliengen\Pachyderm\Migration\Service\SetupService;
+use Pachyderm\Migration\Service\SetupService;
 
 /**
  * Installer for the Pachyderm migration tool.

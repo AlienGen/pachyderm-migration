@@ -1,6 +1,6 @@
 <?php
 
-namespace Aliengen\Pachyderm\Migration\Repository;
+namespace Pachyderm\Migration\Repository;
 
 interface MigrationRepositoryInterface
 {
