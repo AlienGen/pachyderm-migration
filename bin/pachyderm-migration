@@ -5,8 +5,8 @@
  * Pachyderm migration tool executable.
  *
  * This file can be run directly or via composer:
- * - Direct: ./vendor/bin/migration
- * - Composer: composer run migration
+ * - Direct: ./vendor/bin/pachyderm-migration
+ * - Composer: composer run pachyderm-migration
  *
  * @see https://github.com/aliengen/pachyderm-migration
  * @package Aliengen\Pachyderm\Migration
@@ -46,8 +46,18 @@ if (!file_exists($projectRoot . '/config.php')) {
 // Require the config.php file
 require_once $projectRoot . '/config.php';
 
-// Create a new instance of the Migration class using the factory
+// Import required classes
+use Aliengen\Pachyderm\Migration\Service\SetupService;
 use Aliengen\Pachyderm\Migration\Factory\MigrationFactory;
+
+// Check if --setup flag is provided
+if (isset($argv[1]) && $argv[1] === '--setup') {
+    echo "Setting up migration structure...\n";
+    
+    // Use the SetupService
+    SetupService::setup($projectRoot);
+    exit(0);
+}
 
 // Execute the up method
 $migration = MigrationFactory::create();

@@ -21,11 +21,6 @@
     "bin": [
         "bin/pachyderm-migration"
     ],
-    "scripts": {
-        "migration:setup": [
-            "Aliengen\\Pachyderm\\Migration\\Composer\\Installer::postInstall"
-        ]
-    },
     "extra": {
         "installer-name": "pachyderm-migration"
     }

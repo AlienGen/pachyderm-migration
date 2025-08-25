@@ -33,7 +33,7 @@ composer require aliengen/pachyderm-migration
 After installation, run the setup command to create the necessary files:
 
 ```bash
-composer run migration:setup
+./vendor/bin/pachyderm-migration --setup
 ```
 
 This will automatically create:

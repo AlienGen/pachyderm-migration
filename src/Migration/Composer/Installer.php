@@ -3,6 +3,7 @@
 namespace Aliengen\Pachyderm\Migration\Composer;
 
 use Composer\Script\Event;
+use Aliengen\Pachyderm\Migration\Service\SetupService;
 
 /**
  * Installer for the Pachyderm migration tool.
@@ -51,18 +52,10 @@ class Installer
     {
         $io = $event->getIO();
         $projectRoot = getcwd();
-
-        $migrationsDir = $projectRoot . '/database/migrations';
-        $migrationFile = $projectRoot . '/migration.php';
-
-        if (!is_dir($migrationsDir)) {
-            mkdir($migrationsDir, 0777, true);
-            $io->write("<info>Created database/migrations folder</info>");
-        }
-
-        if (!file_exists($migrationFile)) {
-            file_put_contents($migrationFile, "<?php\n\nrequire_once __DIR__ . '/vendor/aliengen/pachyderm-migration/migration.php';\n");
-            $io->write("<info>Created migration.php file</info>");
-        }
+        
+        // Use the SetupService with Composer's IO output
+        SetupService::setup($projectRoot, function($message) use ($io) {
+            $io->write("<info>{$message}</info>");
+        });
     }
 }
