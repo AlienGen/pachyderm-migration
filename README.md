@@ -12,6 +12,7 @@ A simple and reliable SQL database migration tool for Pachyderm applications. Ma
 - **🔄 Ordered Execution**: Runs migrations in alphabetical order
 - **🛡️ Safe**: Prevents duplicate execution
 - **⚡ Zero Config**: Works out of the box
+- **🤖 Auto-setup**: Automatically creates necessary files and directories
 
 ## 📋 Requirements
 
@@ -52,10 +53,10 @@ CREATE TABLE users (
 php migration.php
 
 # Option 2: Using the vendor binary directly
-./vendor/bin/migration
+./vendor/bin/pachyderm-migration
 
 # Option 3: Using composer run
-composer run migration
+composer run pachyderm-migration
 ```
 
 That's it! Your migration will be executed and tracked automatically.
@@ -69,10 +70,10 @@ Run all pending migrations using any of these methods:
 php migration.php
 
 # Using the vendor binary
-./vendor/bin/migration
+./vendor/bin/pachyderm-migration
 
 # Using composer
-composer run migration
+composer run pachyderm-migration
 ```
 
 ## 📁 Project Structure

@@ -22,10 +22,10 @@
         "bin/pachyderm-migration"
     ],
     "scripts": {
-        "post-install-cmd": [
+        "post-package-install": [
             "Aliengen\\Pachyderm\\Migration\\Composer\\Installer::postInstall"
         ],
-        "post-update-cmd": [
+        "post-package-update": [
             "Aliengen\\Pachyderm\\Migration\\Composer\\Installer::postUpdate"
         ],
         "post-autoload-dump": [
