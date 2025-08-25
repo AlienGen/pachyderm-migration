@@ -45,20 +45,34 @@ CREATE TABLE users (
 );
 ```
 
-2. **Run migrations**:
+2. **Run migrations** using any of these methods:
 
 ```bash
+# Option 1: Using the generated migration.php file
 php migration.php
+
+# Option 2: Using the vendor binary directly
+./vendor/bin/migration
+
+# Option 3: Using composer run
+composer run migration
 ```
 
 That's it! Your migration will be executed and tracked automatically.
 
 ## 📚 Usage
 
-Run all pending migrations:
+Run all pending migrations using any of these methods:
 
 ```bash
+# Using the generated file
 php migration.php
+
+# Using the vendor binary
+./vendor/bin/migration
+
+# Using composer
+composer run migration
 ```
 
 ## 📁 Project Structure

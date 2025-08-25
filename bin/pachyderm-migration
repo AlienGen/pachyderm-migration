@@ -1,0 +1,54 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * Pachyderm migration tool executable.
+ *
+ * This file can be run directly or via composer:
+ * - Direct: ./vendor/bin/migration
+ * - Composer: composer run migration
+ *
+ * @see https://github.com/aliengen/pachyderm-migration
+ * @package Aliengen\Pachyderm\Migration
+ * @author Timothé Mermet-Buffet <mermetbt@gmail.com>
+ * @version 1.0.0
+ */
+
+// Find the vendor directory by looking for autoload.php
+$vendorDir = null;
+$currentDir = __DIR__;
+
+// Walk up the directory tree to find vendor/autoload.php
+while ($currentDir !== dirname($currentDir)) {
+    if (file_exists($currentDir . '/vendor/autoload.php')) {
+        $vendorDir = $currentDir . '/vendor';
+        break;
+    }
+    $currentDir = dirname($currentDir);
+}
+
+// Check if we found the vendor directory
+if (!$vendorDir) {
+    echo "Could not find vendor/autoload.php. Please run `composer install` to install the dependencies.\n";
+    exit(1);
+}
+
+// Require the autoload.php file
+require_once $vendorDir . '/autoload.php';
+
+// Check if the config.php file exists
+$projectRoot = dirname($vendorDir);
+if (!file_exists($projectRoot . '/config.php')) {
+    echo "Please create a `config.php` file in the root of your project.\n";
+    exit(1);
+}
+
+// Require the config.php file
+require_once $projectRoot . '/config.php';
+
+// Create a new instance of the Migration class using the factory
+use Aliengen\Pachyderm\Migration\Factory\MigrationFactory;
+
+// Execute the up method
+$migration = MigrationFactory::create();
+$migration->up();

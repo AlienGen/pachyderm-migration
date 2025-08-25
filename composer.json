@@ -18,12 +18,18 @@
             "Aliengen\\Pachyderm\\Migration\\": "src/Migration/"
         }
     },
+    "bin": [
+        "bin/pachyderm-migration"
+    ],
     "scripts": {
         "post-install-cmd": [
             "Aliengen\\Pachyderm\\Migration\\Composer\\Installer::postInstall"
         ],
         "post-update-cmd": [
             "Aliengen\\Pachyderm\\Migration\\Composer\\Installer::postUpdate"
+        ],
+        "post-autoload-dump": [
+            "Aliengen\\Pachyderm\\Migration\\Composer\\Installer::postInstall"
         ]
     }
 }
