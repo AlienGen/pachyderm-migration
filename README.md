@@ -12,7 +12,7 @@ A simple and reliable SQL database migration tool for Pachyderm applications. Ma
 - **🔄 Ordered Execution**: Runs migrations in alphabetical order
 - **🛡️ Safe**: Prevents duplicate execution
 - **⚡ Zero Config**: Works out of the box
-- **🤖 Auto-setup**: Automatically creates necessary files and directories
+- **🤖 Easy Setup**: Simple command to set up the migration structure
 
 ## 📋 Requirements
 
@@ -28,7 +28,15 @@ A simple and reliable SQL database migration tool for Pachyderm applications. Ma
 composer require aliengen/pachyderm-migration
 ```
 
-The package automatically creates:
+### Setup
+
+After installation, run the setup command to create the necessary files:
+
+```bash
+composer run migration:setup
+```
+
+This will automatically create:
 - `database/migrations/` folder for your SQL files
 - `migration.php` file for easy execution
 
