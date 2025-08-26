@@ -14,7 +14,7 @@
  * - Execute the up method
  * 
  * @see https://github.com/aliengen/pachyderm-migration
- * @package Aliengen\Pachyderm\Migration
+ * @package Pachyderm\Migration
  * @author Timothé Mermet-Buffet <mermetbt@gmail.com>
  * @version 1.0.0
  */

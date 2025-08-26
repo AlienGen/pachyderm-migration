@@ -14,8 +14,8 @@
         }
     ],
     "autoload": {
-        "psr-0": {
-            "Pachyderm": "src/"
+        "psr-4": {
+            "Pachyderm\\Migration\\": "src/Migration/"
         }
     },
     "bin": [

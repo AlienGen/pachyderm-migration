@@ -14,7 +14,7 @@ use Pachyderm\Migration\Service\SetupService;
  * - Create a migration.php file in the project root
  * 
  * @see https://github.com/aliengen/pachyderm-migration
- * @package Aliengen\Pachyderm\Migration\Composer
+ * @package Pachyderm\Migration\Composer
  * @author Timothé Mermet-Buffet <mermetbt@gmail.com>
  * @version 1.0.0
  */
