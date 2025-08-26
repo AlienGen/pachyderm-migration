@@ -104,6 +104,14 @@ your-project/
 
 Ensure your Pachyderm `config.php` file includes the necessary database configuration. The migration tool will use Pachyderm's database service to connect to your database.
 
+Example of the `database` service declaration in the `config.php` file:
+
+```php
+Service::set('database', function () {
+  return Db::getInstance();
+});
+```
+
 ## 🤝 Contributing
 
 1. **Fork** the repository
